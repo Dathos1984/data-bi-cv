@@ -39,13 +39,14 @@ section.resume-section {
 #skills-grid {
   display: grid;
   /* Creates automatic columns of 110px and centers them */
-  grid-template-columns: repeat(auto-fit, 110px);
+  grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
   justify-content: center;
-  gap: 1.5rem; /* The space between icons */
+  gap: 1rem; /* The space between icons */
 }
 
 /* 2. The style and animation for each item */
 .grid-item {
+  padding: 10px;
   text-align: center;
   /* Defines the appear/disappear animation */
   transition: transform 0.4s ease, opacity 0.4s ease;
