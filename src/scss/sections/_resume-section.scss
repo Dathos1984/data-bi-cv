@@ -30,3 +30,37 @@ section.resume-section {
         padding-bottom: 5rem;
     }
 }
+
+/* Styles for the Interactive Skills Section */
+
+/* Style for each skill item */
+.skill-item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Class to hide items that don't match the filter */
+.skill-item.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  /* Mantiene el efecto visual de "encogerse" al desaparecer */
+  transform: scale(0.5);
+}
+
+/* Style for Font Awesome icons */
+.skill-item i {
+  color: #495057; /* A professional icon color */
+  transition: color 0.3s ease;
+}
+
+.skill-item:hover i {
+  color: #0d6efd; /* Bootstrap's primary color on hover */
+}
+
+/* Style for the filter buttons */
+#filters .btn {
+  border-radius: 20px; /* Rounded borders */
+}
