@@ -1,6 +1,6 @@
 {
     "title": "Resume",
-    "name": "startbootstrap-resume",
+    "name": "data-bi-cv",
     "version": "7.0.6",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
@@ -23,7 +23,7 @@
     ],
     "homepage": "https://startbootstrap.com/theme/resume",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-resume/issues",
+        "url": "https://github.com/StartBootstrap/data-bi-cv/issues",
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
@@ -33,11 +33,11 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-resume.git"
+        "url": "https://github.com/StartBootstrap/data-bi-cv.git"
     },
     "dependencies": {
         "bootstrap": "5.2.3",
-        "startbootstrap-resume": "^7.0.6"
+        "data-bi-cv": "^7.0.6"
     },
     "devDependencies": {
         "autoprefixer": "10.4.14",

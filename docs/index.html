@@ -132,99 +132,99 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">Skills</h2>
                     <p class="subheading mb-3">Select a category to filter technologies.</p>
-                    <!-- 1. FILTER BUTTONS-->
+                    <!-- 1. FILTER BUTTONS (Using CSS selectors for data-filter)-->
                     <div class="d-flex flex-wrap justify-content-center mb-3" id="filters">
-                        <button class="btn btn-primary m-1 active" data-filter="all">All</button>
-                        <button class="btn btn-outline-primary m-1" data-filter="bi_visualization">BI & Visualization</button>
-                        <button class="btn btn-outline-primary m-1" data-filter="etl">ETL Tools</button>
-                        <button class="btn btn-outline-primary m-1" data-filter="databases">Databases</button>
-                        <button class="btn btn-outline-primary m-1" data-filter="cloud_big_data">Cloud & Big Data</button>
-                        <button class="btn btn-outline-primary m-1" data-filter="languages">Languages</button>
+                        <button class="btn btn-primary m-1 active" data-filter="*">All</button>
+                        <button class="btn btn-outline-primary m-1" data-filter=".bi-visualization">BI & Visualization</button>
+                        <button class="btn btn-outline-primary m-1" data-filter=".etl">ETL Tools</button>
+                        <button class="btn btn-outline-primary m-1" data-filter=".databases">Databases</button>
+                        <button class="btn btn-outline-primary m-1" data-filter=".cloud-big-data">Cloud & Big Data</button>
+                        <button class="btn btn-outline-primary m-1" data-filter=".languages">Languages</button>
                     </div>
-                    <!-- 2. SKILLS ICON CONTAINER-->
-                    <div class="row g-3 text-center flex-wrap justify-content-center" id="skills-grid">
+                    <!-- 2. SKILLS ICON CONTAINER (with .grid class for Isotope)-->
+                    <div class="grid" id="skills-grid">
                         <!-- -- BI & Visualization ---->
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="bi_visualization">
+                        <div class="grid-item bi-visualization text-center">
                             <i class="fas fa-chart-bar fa-2x"></i>
                             <p class="mt-1">Power BI</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="bi_visualization">
+                        <div class="grid-item bi-visualization text-center">
                             <i class="fas fa-chart-pie fa-2x"></i>
                             <p class="mt-1">Tableau</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="bi_visualization">
+                        <div class="grid-item bi-visualization text-center">
                             <i class="fas fa-cube fa-2x"></i>
                             <p class="mt-1">Cube.js</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="bi_visualization">
+                        <div class="grid-item bi-visualization text-center">
                             <i class="fas fa-chart-simple fa-2x"></i>
                             <p class="mt-1">Cognos</p>
                         </div>
                         <!-- -- ETL Tools ---->
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="etl">
+                        <div class="grid-item etl text-center">
                             <i class="fas fa-cogs fa-2x"></i>
                             <p class="mt-1">Datastage</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="etl">
+                        <div class="grid-item etl text-center">
                             <i class="fas fa-project-diagram fa-2x"></i>
                             <p class="mt-1">Airflow</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="etl">
+                        <div class="grid-item etl text-center">
                             <i class="fas fa-project-diagram fa-2x"></i>
                             <p class="mt-1">SSIS</p>
                         </div>
                         <!-- -- Databases ---->
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="databases">
+                        <div class="grid-item databases text-center">
                             <i class="fas fa-server fa-2x"></i>
                             <p class="mt-1">PostgreSQL</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="databases">
+                        <div class="grid-item databases text-center">
                             <i class="fas fa-database fa-2x"></i>
                             <p class="mt-1">MySQL</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="databases">
-                            <i class="fab fa-amazon fa-2x"></i>
+                        <div class="grid-item databases text-center">
+                            <i class="fab fa-aws fa-2x"></i>
                             <p class="mt-1">Redshift</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="databases">
+                        <div class="grid-item databases text-center">
                             <i class="fas fa-table fa-2x"></i>
                             <p class="mt-1">Oracle</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="databases">
+                        <div class="grid-item databases text-center">
                             <i class="fas fa-leaf fa-2x"></i>
                             <p class="mt-1">MongoDB</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="databases">
+                        <div class="grid-item databases text-center">
                             <i class="fas fa-database fa-2x"></i>
                             <p class="mt-1">DB2</p>
                         </div>
                         <!-- -- Cloud & Big Data ---->
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="cloud_big_data">
+                        <div class="grid-item cloud-big-data text-center">
                             <i class="fab fa-aws fa-2x"></i>
                             <p class="mt-1">AWS</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="cloud_big_data">
+                        <div class="grid-item cloud-big-data text-center">
                             <i class="fab fa-google fa-2x"></i>
                             <p class="mt-1">GCP</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="cloud_big_data">
+                        <div class="grid-item cloud-big-data text-center">
                             <i class="fab fa-microsoft fa-2x"></i>
                             <p class="mt-1">Azure</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="cloud_big_data">
+                        <div class="grid-item cloud-big-data text-center">
                             <i class="fas fa-fire fa-2x"></i>
                             <p class="mt-1">Spark</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="cloud_big_data">
+                        <div class="grid-item cloud-big-data text-center">
                             <i class="fas fa-cogs fa-2x"></i>
                             <p class="mt-1">dbt</p>
                         </div>
                         <!-- -- Languages ---->
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="languages">
+                        <div class="grid-item languages text-center">
                             <i class="fab fa-python fa-2x"></i>
                             <p class="mt-1">Python</p>
                         </div>
-                        <div class="col-4 col-md-1 skill-item text-center" data-category="languages">
+                        <div class="grid-item languages text-center">
                             <i class="fas fa-database fa-2x"></i>
                             <p class="mt-1">SQL</p>
                         </div>

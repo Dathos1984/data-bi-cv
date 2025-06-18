@@ -33,34 +33,43 @@ section.resume-section {
 
 /* Styles for the Interactive Skills Section */
 
-/* Style for each skill item */
-.skill-item {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transform: scale(1);
-  opacity: 1;
+/* === FINAL AND CORRECTED CSS (NO DOUBLE TRANSITION) === */
+
+/* 1. The main container uses CSS Grid for a perfect layout */
+#skills-grid {
+  display: grid;
+  /* Creates automatic columns of 110px and centers them */
+  grid-template-columns: repeat(auto-fit, 110px);
+  justify-content: center;
+  gap: 1.5rem; /* The space between icons */
 }
 
-/* Class to hide items that don't match the filter */
-.skill-item.hide {
+/* 2. The style and animation for each item */
+.grid-item {
+  text-align: center;
+  /* Defines the appear/disappear animation */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* 3. The class that hides items without making the page "jump" */
+.grid-item.hide {
+  transform: scale(0);
   opacity: 0;
+  /* Make it invisible and non-interactive */
   visibility: hidden;
   pointer-events: none;
-
-  /* Mantiene el efecto visual de "encogerse" al desaparecer */
-  transform: scale(0.5);
 }
 
-/* Style for Font Awesome icons */
-.skill-item i {
-  color: #495057; /* A professional icon color */
+/* 4. Visual styles (remain the same) */
+.grid-item i {
+  color: #495057;
   transition: color 0.3s ease;
 }
 
-.skill-item:hover i {
-  color: #0d6efd; /* Bootstrap's primary color on hover */
+.grid-item:hover i {
+  color: #0d6efd;
 }
 
-/* Style for the filter buttons */
 #filters .btn {
-  border-radius: 20px; /* Rounded borders */
+  border-radius: 20px;
 }

@@ -148,82 +148,84 @@ html(lang='en')
                 .resume-section-content
                     h2.mb-5 Skills
                     p.subheading.mb-3 Select a category to filter technologies.
-                    // 1. FILTER BUTTONS
+                    // 1. FILTER BUTTONS (Using CSS selectors for data-filter)
                     #filters.d-flex.flex-wrap.justify-content-center.mb-3
-                        button.btn.btn-primary.m-1.active(data-filter="all") All
-                        button.btn.btn-outline-primary.m-1(data-filter="bi_visualization") BI & Visualization
-                        button.btn.btn-outline-primary.m-1(data-filter="etl") ETL Tools
-                        button.btn.btn-outline-primary.m-1(data-filter="databases") Databases                                                
-                        button.btn.btn-outline-primary.m-1(data-filter="cloud_big_data") Cloud & Big Data
-                        button.btn.btn-outline-primary.m-1(data-filter="languages") Languages
-                    // 2. SKILLS ICON CONTAINER
-                    #skills-grid.row.g-3.text-center.flex-wrap.justify-content-center
-  
+                        button.btn.btn-primary.m-1.active(data-filter="*") All
+                        button.btn.btn-outline-primary.m-1(data-filter=".bi-visualization") BI & Visualization
+                        button.btn.btn-outline-primary.m-1(data-filter=".etl") ETL Tools
+                        button.btn.btn-outline-primary.m-1(data-filter=".databases") Databases
+                        button.btn.btn-outline-primary.m-1(data-filter=".cloud-big-data") Cloud & Big Data
+                        button.btn.btn-outline-primary.m-1(data-filter=".languages") Languages
+                    // 2. SKILLS ICON CONTAINER (with .grid class for Isotope)
+                    #skills-grid.grid
+                        
                         // -- BI & Visualization --
-                        .col-4.col-md-1.skill-item.text-center(data-category="bi_visualization")
+                        .grid-item.bi-visualization.text-center
                             i.fas.fa-chart-bar.fa-2x
                             p.mt-1 Power BI
-                        .col-4.col-md-1.skill-item.text-center(data-category="bi_visualization")
+                        .grid-item.bi-visualization.text-center
                             i.fas.fa-chart-pie.fa-2x
                             p.mt-1 Tableau
-                        .col-4.col-md-1.skill-item.text-center(data-category="bi_visualization")
+                        .grid-item.bi-visualization.text-center
                             i.fas.fa-cube.fa-2x
                             p.mt-1 Cube.js
-                        .col-4.col-md-1.skill-item.text-center(data-category="bi_visualization")
+                        .grid-item.bi-visualization.text-center
                             i.fas.fa-chart-simple.fa-2x
                             p.mt-1 Cognos
+
                         // -- ETL Tools --
-                        .col-4.col-md-1.skill-item.text-center(data-category="etl")
+                        .grid-item.etl.text-center
                             i.fas.fa-cogs.fa-2x
                             p.mt-1 Datastage
-                        .col-4.col-md-1.skill-item.text-center(data-category="etl")
+                        .grid-item.etl.text-center
                             i.fas.fa-project-diagram.fa-2x
                             p.mt-1 Airflow
-                        .col-4.col-md-1.skill-item.text-center(data-category="etl")
+                        .grid-item.etl.text-center
                             i.fas.fa-project-diagram.fa-2x
                             p.mt-1 SSIS
                         
                         // -- Databases --
-                        .col-4.col-md-1.skill-item.text-center(data-category="databases")
+                        .grid-item.databases.text-center
                             i.fas.fa-server.fa-2x
                             p.mt-1 PostgreSQL
-                        .col-4.col-md-1.skill-item.text-center(data-category="databases")
+                        .grid-item.databases.text-center
                             i.fas.fa-database.fa-2x
                             p.mt-1 MySQL
-                        .col-4.col-md-1.skill-item.text-center(data-category="databases")
-                            i.fab.fa-amazon.fa-2x
+                        .grid-item.databases.text-center
+                            i.fab.fa-aws.fa-2x
                             p.mt-1 Redshift
-                        .col-4.col-md-1.skill-item.text-center(data-category="databases")
+                        .grid-item.databases.text-center
                             i.fas.fa-table.fa-2x
                             p.mt-1 Oracle
-                        .col-4.col-md-1.skill-item.text-center(data-category="databases")
+                        .grid-item.databases.text-center
                             i.fas.fa-leaf.fa-2x
                             p.mt-1 MongoDB
-                        .col-4.col-md-1.skill-item.text-center(data-category="databases")
+                        .grid-item.databases.text-center
                             i.fas.fa-database.fa-2x
                             p.mt-1 DB2
 
                         // -- Cloud & Big Data --
-                        .col-4.col-md-1.skill-item.text-center(data-category="cloud_big_data")
+                        .grid-item.cloud-big-data.text-center
                             i.fab.fa-aws.fa-2x
                             p.mt-1 AWS
-                        .col-4.col-md-1.skill-item.text-center(data-category="cloud_big_data")
+                        .grid-item.cloud-big-data.text-center
                             i.fab.fa-google.fa-2x
                             p.mt-1 GCP
-                        .col-4.col-md-1.skill-item.text-center(data-category="cloud_big_data")
+                        .grid-item.cloud-big-data.text-center
                             i.fab.fa-microsoft.fa-2x
                             p.mt-1 Azure
-                        .col-4.col-md-1.skill-item.text-center(data-category="cloud_big_data")
+                        .grid-item.cloud-big-data.text-center
                             i.fas.fa-fire.fa-2x
                             p.mt-1 Spark
-                        .col-4.col-md-1.skill-item.text-center(data-category="cloud_big_data")
+                        .grid-item.cloud-big-data.text-center
                             i.fas.fa-cogs.fa-2x
                             p.mt-1 dbt
+                            
                         // -- Languages --
-                        .col-4.col-md-1.skill-item.text-center(data-category="languages")
+                        .grid-item.languages.text-center
                             i.fab.fa-python.fa-2x
                             p.mt-1 Python
-                        .col-4.col-md-1.skill-item.text-center(data-category="languages")
+                        .grid-item.languages.text-center
                             i.fas.fa-database.fa-2x
                             p.mt-1 SQL
 
@@ -302,6 +304,8 @@ html(lang='en')
                             | 3
                             sup rd 
                             | Place - James Buchanan High School - Hackathon 2005
+
+      
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
