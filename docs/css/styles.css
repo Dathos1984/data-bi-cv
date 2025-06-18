@@ -10975,29 +10975,37 @@ section.resume-section .resume-section-content {
 /* 1. The main container uses CSS Grid for a perfect layout */
 #skills-grid {
   display: grid;
-  /* Creates automatic columns of 110px and centers them */
-  grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+  /* Creates automatic columns */
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   justify-content: center;
   gap: 1rem; /* The space between icons */
+  row-gap: 0.2rem;
 }
 
 /* 2. The style and animation for each item */
 .grid-item {
   padding: 10px;
   text-align: center;
+  font-size: 0.85rem;
   /* Defines the appear/disappear animation */
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease, height 0s 0.4s, margin 0s 0.4s;
 }
 
 /* 3. The class that hides items without making the page "jump" */
 .grid-item.hide {
   transform: scale(0);
   opacity: 0;
-  /* Make it invisible and non-interactive */
-  visibility: hidden;
   pointer-events: none;
 }
 
+@media (max-width: 767px) {
+  .grid-item.hide {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease, height 0s 0.4s, margin 0s 0.4s;
+  }
+}
 /* 4. Visual styles (remain the same) */
 .grid-item i {
   color: #495057;
