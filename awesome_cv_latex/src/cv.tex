@@ -1,6 +1,6 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
+% Awesome CV LaTeX Template for CV/cv
 %
 % This template has been downloaded from:
 % https://github.com/posquit0/Awesome-CV
@@ -26,25 +26,23 @@
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-\definecolor{PastelRed}{HTML}{8F0D0D}
-\colorlet{awesome}{awesome-concrete}
-\colorlet{accent}{PastelRed}
+%\colorlet{awesome}{awesome-orange}
 % Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
+\definecolor{awesome}{HTML}{3C65A8}
 
 % Colors for text
 % Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
-% \definecolor{graytext}{HTML}{5D5D5D}
-% \definecolor{lighttext}{HTML}{999999}
-% \definecolor{sectiondivider}{HTML}{5D5D5D}
+\definecolor{darktext}{HTML}{1D1715}
+\definecolor{text}{HTML}{182D40}
+\definecolor{graytext}{HTML}{3C65A8}
+\definecolor{lighttext}{HTML}{3C65A8}
+\definecolor{sectiondivider}{HTML}{3E3E3E}
 
 % Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
 
 % If you would like to change the social information separator from a pipe (|) to something else
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\renewcommand{\acvHeaderSocialSep}{\space\space\textbar\space\space}
 
 
 %-------------------------------------------------------------------------------
@@ -52,23 +50,23 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo{./examples/profile.png}
+\photo[circle,noedge,left]{./profile.jpg}
 \name{David Gilberto}{Rodriguez Acosta}
-\position{Site Reliability Engineer{\enskip\cdotp\enskip}Software Architect}
-\address{235, World Cup buk-ro, Mapo-gu, Seoul, 03936, Republic of Korea}
+\position{Data \& BI Engineer}
+\address{Colombia · Meta - Villavicencio }
 
-\mobile{(+82) 10-9030-1843}
-\email{posquit0.bj@gmail.com}
-%\dateofbirth{January 1st, 1970}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
+\mobile{(+57) 319 599 81 84}
+\email{uddavidro@gmail.com}
+\dateofbirth{September 8, 1984}
+\homepage{bit.ly/4ndQh8c}
+\github{Dathos1984}
+\linkedin{dgra}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
 % \skype{skype-id}
 % \reddit{reddit-id}
-% \medium{medium-id}
+% \medium{madium-id}
 % \kaggle{kaggle-id}
 % \hackerrank{hackerrank-id}
 % \telegram{telegram-username}
@@ -77,37 +75,37 @@
 % \googlescholar{googlescholar-id}{}
 % \extrainfo{extra information}
 
-\quote{``Be the change that you want to see in the world."}
-
-
 %-------------------------------------------------------------------------------
+
 \begin{document}
 
 % Print the header with above personal information
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader
+\makecvheader[C]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Claud D. Park~~~·~~~Curriculum Vitae}
+  {David Gilberto Rodriguez Acosta - Data \& BI Engineer}
   {\thepage}
 
 
 %-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
+%	CV CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
+\input{cv/summary.tex}
+\input{cv/experience.tex}
 \input{cv/education.tex}
 \input{cv/skills.tex}
-\input{cv/experience.tex}
-\input{cv/extracurricular.tex}
-\input{cv/honors.tex}
+% \input{cv/honors.tex}
 \input{cv/certificates.tex}
-\input{cv/presentation.tex}
-\input{cv/writing.tex}
-\input{cv/committees.tex}
+\input{cv/references.tex}
+% \input{cv/presentation.tex}
+% \input{cv/writing.tex}
+% \input{cv/committees.tex}
+% \input{cv/extracurricular.tex}
 
 
 %-------------------------------------------------------------------------------
